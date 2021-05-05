@@ -115,7 +115,7 @@ namespace pandemic
     ostream &operator<<(ostream &os, const Board &a)
     {
         cout << "Disease | Cured/Not Cured " << endl;
-        for (const auto &i : a._isCured)
+        for (const auto &i : pandemic::Board::_isCured)
         {
             cout << i.first << " | ";
             if (i.second)
@@ -129,10 +129,10 @@ namespace pandemic
         }
         cout << endl;
         cout << "City |  Diseases level | Research lab" << endl;
-        for (const auto &i : a._disease_level)
+        for (const auto &i : pandemic::Board::_disease_level)
         {
             cout << i.first << " | " << i.second;
-            if (a._research_station.at(i.first))
+            if (pandemic::Board::_research_station.at(i.first))
             {
                 cout << " | "
                      << "Exist" << endl;
